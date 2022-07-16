@@ -1,0 +1,195 @@
+/* default styling */
+:root {
+  --main-bg-color: rgb(20, 20, 20);
+  --secondary-color: rgb(0, 145, 255);
+  --secondary-bg-color: rgb(30, 30, 30);
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+body {
+  background-color: var(--main-bg-color);
+  color: white;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+a,
+.fake-href {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+a:hover,
+.fake-href:hover {
+  color: var(--secondary-color);
+}
+button {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: white;
+  height: 3.5rem;
+  width: 8rem;
+  transition: 0.5s;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+button:hover {
+  background-color: white;
+  color: var(--secondary-color);
+}
+/* MOBILE DEVICES */
+/* navigation bar */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  height: 10vh;
+}
+/* intro */
+.intro {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 20px;
+  background-image: url("IMG_1830.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.intro h1 {
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+}
+.intro h2,
+.intro h3 {
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+.book-btn,
+.contact-btn {
+  font-size: 1.05rem;
+}
+/* quote */
+.quote-container {
+  height: 15vh;
+  background-color: var(--secondary-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* about me */
+.about-me-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.zak-image {
+  margin-bottom: 30px;
+  object-fit: cover;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 10px;
+}
+.about-me-paragraph {
+  width: 20rem;
+}
+/* contact me */
+.contact-me-container {
+  background-color: var(--secondary-bg-color);
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.contacts {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+/* TABLET DEVICES */
+@media only screen and (min-width: 600px) {
+  .intro {
+    height: 75vh;
+    background-position: 0px -170px;
+  }
+  .contact-me-container,
+  .quote-container {
+    height: 10vh;
+  }
+  .about-me-container {
+    flex-direction: row;
+    gap: 75px;
+  }
+}
+
+/* LAPTOP DEVICES & LARGER TABLETS */
+@media only screen and (min-width: 900px) {
+  .book-btn-1,
+  .contact-btn-1,
+  .about-btn-1 {
+    font-size: 1.5rem;
+  }
+  .intro {
+    height: 75vh;
+    background-position: 0px -210px;
+  }
+  .intro h1 {
+    font-size: 3.5rem;
+  }
+  .intro h2,
+  .quote {
+    font-size: 2rem;
+  }
+  .zak-image {
+    height: 30rem;
+    width: 30rem;
+  }
+  .about-me-container {
+    font-size: 1.2rem;
+  }
+  .contact-me-container,
+  .quote-container {
+    height: 20vh;
+  }
+  .contact-me-container p {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .intro {
+    background-position: 0px -315px;
+  }
+  .about-me-container {
+    gap: 150px;
+  }
+  .about-me-paragraph {
+    width: 25rem;
+  }
+}
